@@ -249,11 +249,13 @@ let touchStartX, touchStartY;
 let swipeTolerance = 50;
 
 canvas.addEventListener("touchstart", (event) => {
+  event.preventDefault();
   touchStartX = event.touches[0].clientX;
   touchStartY = event.touches[0].clientX;
 });
 
 canvas.addEventListener("touchmove", (event) => {
+  event.preventDefault();
   let touchMoveX = event.touches[0].clientX;
   let touchMoveY = event.touches[0].clientY;
 
@@ -282,6 +284,7 @@ canvas.addEventListener("touchmove", (event) => {
 });
 
 canvas.addEventListener("touchend", () => {
+  event.preventDefault();
   touchStartX = null;
   touchStartY = null;
 });
