@@ -266,18 +266,18 @@ canvas.addEventListener("touchmove", (event) => {
     if (Math.abs(dx) > Math.abs(dy)) {
       if (dx > 0) {
         //swipe right
-        pacman.nextDirection = DIRECTION_RIGHT;
+        pacman.direction = DIRECTION_RIGHT;
       } else {
         //swipe left
-        pacman.nextDirection = DIRECTION_LEFT;
+        pacman.direction = DIRECTION_LEFT;
       }
     } else {
       if (dy > 0) {
         //swipe down
-        pacman.nextDirection = DIRECTION_BOTTOM;
+        pacman.direction = DIRECTION_BOTTOM;
       } else {
         //swipe up
-        pacman.nextDirection = DIRECTION_UP;
+        pacman.direction = DIRECTION_UP;
       }
     }
   }
@@ -291,7 +291,6 @@ canvas.addEventListener("touchend", () => {
 
 window.addEventListener("keydown", (event) => {
   let k = event.keyCode;
-  setTimeout(() => {
     if (k == 37 || k == 65) {
       // left arrow or a
       pacman.nextDirection = DIRECTION_LEFT;
@@ -305,5 +304,4 @@ window.addEventListener("keydown", (event) => {
       // bottom arrow or s
       pacman.nextDirection = DIRECTION_BOTTOM;
     }
-  }, 1);
 });
