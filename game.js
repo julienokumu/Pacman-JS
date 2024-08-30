@@ -266,18 +266,18 @@ canvas.addEventListener("touchmove", (event) => {
     if (Math.abs(dx) > Math.abs(dy)) {
       if (dx > 0) {
         //swipe right
-        pacman.direction = DIRECTION_RIGHT;
+        pacman.nextDirection = DIRECTION_RIGHT;
       } else {
         //swipe left
-        pacman.direction = DIRECTION_LEFT;
+        pacman.nextDirection = DIRECTION_LEFT;
       }
     } else {
       if (dy > 0) {
         //swipe down
-        pacman.direction = DIRECTION_BOTTOM;
+        pacman.nextDirection = DIRECTION_BOTTOM;
       } else {
         //swipe up
-        pacman.direction = DIRECTION_UP;
+        pacman.nextDirection = DIRECTION_UP;
       }
     }
   }
