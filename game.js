@@ -251,7 +251,7 @@ let swipeTolerance = 50;
 canvas.addEventListener("touchstart", (event) => {
   event.preventDefault();
   touchStartX = event.touches[0].clientX;
-  touchStartY = event.touches[0].clientX;
+  touchStartY = event.touches[0].clientY;
 });
 
 canvas.addEventListener("touchmove", (event) => {
